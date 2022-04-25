@@ -1,18 +1,20 @@
 package org.example;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.BeforeClass;
-import org.junit.AfterClass;
+import org.testng.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 import java.time.Duration;
+
 public class LoginTest {
     /**
      * осуществление первоначальной настройки
      */
-    public static WebDriver driver;
-    public static LoginPage loginPage;
-    public static ProfilePage profilePage;
+    private static WebDriver driver;
+    private static LoginPage loginPage;
+    private static ProfilePage profilePage;
 
     @BeforeClass
     public static void setup() {
